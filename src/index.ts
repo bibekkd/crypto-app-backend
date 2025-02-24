@@ -5,9 +5,10 @@ import cryptoRoutes from './routes/crytoRoutes';
 import logger from './utils/logger';
 import cron from 'cron';
 import { fetchAndStoreCryptoPrices } from './services/cryptoService';
+import 'dotenv/config'
 
 const app = express();
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 // Middleware
 app.use(cors());
